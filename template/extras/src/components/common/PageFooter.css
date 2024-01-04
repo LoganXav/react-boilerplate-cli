@@ -1,0 +1,3 @@
+.PageFooter {
+  @apply bg-common-black text-common-white relative;
+}

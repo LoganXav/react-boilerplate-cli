@@ -1,0 +1,34 @@
+{
+  "name": "react-boilerplate-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to bootstrap React projects with custom configurations",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@": "src",
+    "@utils": "src/utils",
+    "@constants": "src/constants",
+    "@cli": "src/cli"
+  },
+  "_moduleDirectories": [
+    "node_modules_custom"
+  ],
+  "keywords": [],
+  "author": "Sogbesan Timilehin",
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "execa": "^8.0.1",
+    "fs-extra": "^11.2.0",
+    "module-alias": "^2.2.3",
+    "ora": "^8.0.1",
+    "sort-package-json": "^2.6.0"
+  }
+}

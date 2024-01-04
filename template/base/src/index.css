@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-black-italic.otf") format("opentype");
+    font-weight: 900;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-black.otf") format("opentype");
+    font-weight: 900;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-bold-italic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-bold.otf") format("opentype");
+    font-weight: bold;
+  }
+  /* @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/Gelica/Gelica-ExtraLight-Italic.otf")
+      format("opentype");
+    font-weight: lighter;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/Gelica/Gelica-ExtraLight.otf") format("opentype");
+    font-weight: lighter;
+  } */
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-light-italic.otf") format("opentype");
+    font-weight: light;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-light.otf") format("opentype");
+    font-weight: light;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-medium-italic.otf")
+      format("opentype");
+    font-weight: 500;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-medium.otf") format("opentype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-regular.otf") format("opentype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-regular-italic.otf")
+      format("opentype");
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-semi-bold-italic.otf")
+      format("opentype");
+    font-weight: 600;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/segoeui/segoeui-semi-bold.otf") format("opentype");
+    font-weight: 600;
+  }
+  /* @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/Gelica/Gelica-Thin-Italic.otf") format("opentype");
+    font-weight: 100;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: Segoe UI;
+    src: url("assets/fonts/Gelica/Gelica-Thin.otf") format("opentype");
+    font-weight: 100;
+  } */
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+
+  .material-symbols-outlined-fill {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+
+  .material-symbols-outlined-fill-opsz-20 {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 20;
+  }
+
+  .material-symbols-outlined-fill-1 {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+
+  html,
+  body,
+  #root {
+    @apply font-segoeui font-semibold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    overflow: auto;
+  }
+
+  ::-webkit-scrollbar {
+    /* display: none; */
+  }
+}

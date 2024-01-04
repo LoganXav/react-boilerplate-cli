@@ -1,0 +1,28 @@
+.BlockUI {
+  position: relative;
+  overflow: hidden;
+}
+
+.BlockUI--fullHeight {
+  height: 100%;
+}
+
+.BlockUI-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  /* -webkit-tap-highlight-color: transparent */
+}
+
+.BlockUI-overlay--fullHeight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* pointer-events: none; */
+}
