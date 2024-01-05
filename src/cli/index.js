@@ -29,7 +29,7 @@ const defaultOptions = {
     noAuth: false,
     noInstall: false,
     tailwind: false,
-    importAlias: "@/",
+    // importAlias: "@/",
   },
 }
 
@@ -70,11 +70,12 @@ export const runCli = async () => {
     cliResults.appName = cliProvidedName
   }
 
+  // This code is gotten from https://create.t3.gg/en/installation#experimental-usage.
   try {
     if (process.env.TERM_PROGRAM?.toLowerCase().includes("mintty")) {
       logger.warn(`  WARNING: It looks like you are using MinTTY, which is non-interactive. This is most likely because you are 
   using Git Bash. If that's that case, please use Git Bash from another terminal, such as Windows Terminal. Alternatively, you 
-  can provide the arguments from the CLI directly: https://create.t3.gg/en/installation#experimental-usage to skip the prompts.`)
+  can provide the arguments from the CLI directly`)
 
       throw new IsTTYError("Non-interactive environment")
     }
@@ -108,14 +109,14 @@ export const runCli = async () => {
             })
           },
         }),
-        importAlias: () => {
-          return p.text({
-            message: "What import alias would you like to use?",
-            defaultValue: defaultOptions.flags.importAlias,
-            placeholder: defaultOptions.flags.importAlias,
-            validate: validateImportAlias,
-          })
-        },
+        // importAlias: () => {
+        //   return p.text({
+        //     message: "What import alias would you like to use?",
+        //     defaultValue: defaultOptions.flags.importAlias,
+        //     placeholder: defaultOptions.flags.importAlias,
+        //     validate: validateImportAlias,
+        //   })
+        // },
       },
       {
         onCancel() {
@@ -147,8 +148,8 @@ export const runCli = async () => {
       },
     }
   } catch {
-    // If the user is not calling create-t3-app from an interactive terminal, inquirer will throw an IsTTYError
-    // If this happens, we catch the error, tell the user what has happened, and then continue to run the program with a default t3 app
+    // If the user is not calling create-simplify-app from an interactive terminal, inquirer will throw an IsTTYError
+    // If this happens, we catch the error, tell the user what has happened, and then continue to run the program with a default simplify app
     if (err instanceof IsTTYError) {
       logger.warn(`
   ${CREATE_SIMPLIFY_APP} needs an interactive terminal to provide options`)

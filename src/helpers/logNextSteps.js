@@ -10,7 +10,7 @@ export const logNextSteps = async ({
   const packageManager = getUserPackageManager()
 
   logger.info("Next steps:")
-  projectName !== "." && logger.info(`  cd ${projectName}`)
+  projectName !== "." && logger.info(`cd ${projectName}`)
   if (noInstall) {
     // To reflect yarn's default behavior of installing packages when no additional args provided
     if (packageManager === "yarn") {

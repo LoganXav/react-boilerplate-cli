@@ -13,14 +13,17 @@ import { logNextSteps } from "./helpers/logNextSteps.js"
 import { logger } from "./utils/logger.js"
 
 const main = async () => {
-  // const npmVersion = await getNpmVersion();
   const packageManager = getUserPackageManager()
   logTitle()
 
   const {
     appName,
     packages,
-    flags: { importAlias, noInstall, noAuth },
+    flags: {
+      // importAlias,
+      noInstall,
+      noAuth,
+    },
   } = await runCli()
 
   const usePackages = buildPackageInstaller(packages)
@@ -32,7 +35,7 @@ const main = async () => {
     projectName: appDir,
     scopedAppName,
     packages: usePackages,
-    importAlias,
+    // importAlias,
     noInstall,
     noAuth,
   })
@@ -45,9 +48,9 @@ const main = async () => {
   })
 
   // update import alias in any generated files if not using the default
-  if (importAlias !== "@/") {
-    setImportAlias(projectDir, importAlias)
-  }
+  // if (importAlias !== "@/") {
+  //   setImportAlias(projectDir, importAlias)
+  // }
 
   // run npm install
   if (!noInstall) {
