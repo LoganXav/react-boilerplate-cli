@@ -144,7 +144,7 @@ export const runCli = async () => {
         ...cliResults.flags,
         noAuth: !project.authentication ?? cliResults.flags.noAuth,
         noInstall: !project.install ?? cliResults.flags.noInstall,
-        importAlias: project.importAlias ?? cliResults.flags.importAlias,
+        // importAlias: project.importAlias ?? cliResults.flags.importAlias,
       },
     }
   } catch {
